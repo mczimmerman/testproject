@@ -1,4 +1,4 @@
-#! usr/bin/bash
+#!/bin/bash
 # Used to initialize elastichsearch. Mostly for fixing CA certs.
 # Matthew Zimmerman (Fri  3 Jun 2022 09:09:18 EDT)
 
