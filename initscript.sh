@@ -32,9 +32,9 @@ if [ x${ELASTIC_PASSWORD} == x ]; then
           unzip config/certs/certs.zip -d config/certs;
         fi;
         echo "Setting file permissions"
-        sudo chown -R root:root config/certs;
-        sudo find . -type d -exec chmod 750 \{\} \;;
-        sudo find . -type f -exec chmod 640 \{\} \;;
+        chown -R root:root config/certs;
+        find . -type d -exec chmod 750 \{\} \;;
+        find . -type f -exec chmod 640 \{\} \;;
         echo "Waiting for Elasticsearch availability";
         until curl -s --cacert config/certs/ca/ca.crt https://elasticsearch:9200 | grep -q "missing authentication credentials"; do sleep 30; done;
         echo "Setting kibana_system password";
