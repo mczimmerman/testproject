@@ -17,6 +17,7 @@ if [ x${ELASTIC_PASSWORD} == x ]; then
         fi;
         if [ ! -f certs/ca.zip ]; then
           echo "Creating CA";
+          mkdir -p config/certs/;
           bin/elasticsearch-certutil ca --silent --pem -out config/certs/ca.zip;
           unzip config/certs/ca.zip -d config/certs;
         fi;
