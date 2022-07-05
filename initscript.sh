@@ -3,10 +3,6 @@
 # Matthew Zimmerman (Fri  3 Jun 2022 09:09:18 EDT)
 
 
-echo "Hello World"
-whoami
-ls -laht /local/repo/
-
 
 if [ x${ELASTIC_PASSWORD} == x ]; then
           echo "Set the ELASTIC_PASSWORD environment variable in the .env file";
@@ -15,7 +11,7 @@ if [ x${ELASTIC_PASSWORD} == x ]; then
           echo "Set the KIBANA_PASSWORD environment variable in the .env file";
           exit 1;
         fi;
-        if [ ! -f certs/ca.zip ]; then
+        if [ ! -f config/certs/ca.zip ]; then
           echo "Creating CA";
           mkdir -p config/certs/;
           bin/elasticsearch-certutil ca --silent --pem -out config/certs/ca.zip;
