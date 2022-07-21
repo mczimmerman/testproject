@@ -23,7 +23,7 @@ if [ x${ELASTIC_PASSWORD} == x ]; then
           "  - name: elasticsearch\n"\
           "    dns:\n"\
           "      - elasticsearchtransport.service.consul\n"\
-          "      - es.mzimmerman.dev
+          "      - es.mzimmerman.dev\n"\
           "      - localhost\n"\
           "    ip:\n"\
           "      - 127.0.0.1\n"\
