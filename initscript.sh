@@ -22,7 +22,8 @@ if [ x${ELASTIC_PASSWORD} == x ]; then
           "instances:\n"\
           "  - name: elasticsearch\n"\
           "    dns:\n"\
-          "      - elasticsearch\n"\
+          "      - elasticsearchtransport.service.consul\n"\
+          "      - es.mzimmerman.dev
           "      - localhost\n"\
           "    ip:\n"\
           "      - 127.0.0.1\n"\
